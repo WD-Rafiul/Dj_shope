@@ -1,6 +1,27 @@
 {% extends 'mainapp/base.html' %}
 {% block content %}
 
-<h2>kello app</h2>
+
+<!-- here is the item  -->
+<div class="mt-3 px-5 py-12 bg-gray-200 rounded-xl">
+    <h1 class="mb-5 text-2xl text-center">New Products</h1>
+    <div class=" grid grid-cols-4 gap-5">
+        {% for product in itemss %}
+        <div>
+            <a href="#">gd</a>
+            <div>
+                <img src="{{ product.image.url}}" alt="">
+                <div>
+                    <h2 class=" text-2xl">{{product.Name}}</h2>
+                    <p>{{ product.price}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
 
 {% endblock %}
