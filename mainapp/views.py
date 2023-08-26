@@ -6,4 +6,4 @@ from item.models import Category, Items
 def index(request):
     items = Items.objects.filter(is_sold=False)[:12]
     categories = Category.objects.all()
-    return render(request, 'mainapp/index.html', {'categoriess': categories,'itemss':items})
+    return render(request, 'mainapp/index.html', {'categoriess': categories,'itemss': items})
