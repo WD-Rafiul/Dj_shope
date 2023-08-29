@@ -5,4 +5,4 @@ from .models import Category,Items
 # Register your models here.
 
 admin.site.register(Category)
-admin.site.register(Items)
+admin.site.register(Items)/
