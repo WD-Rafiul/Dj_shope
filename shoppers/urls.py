@@ -24,4 +24,4 @@ from mainapp.views import index
 urlpatterns = [
     path('',index, name='index'),
     path('admin/', admin.site.urls),
-]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT),
+]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
