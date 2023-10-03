@@ -6,15 +6,15 @@
 
 <div class="grid grid-cols-5 gap-5">
     <div class="col-span-3 rounded">
-        <img src="{{  item.image.url  }}" alt="">
+        <img src="{{  product.image.url  }}" alt="">
     </div>
     <div class="col-span-2 p-5 bg-teal-200 rounded-xl">
-        <h1 class="mb-5 text-3xl"> <strong class="font-semibold">{{ item.name }}</strong></h1>
-        <p class="text-xl">Price: {{ item.price }}</p>
-        <p>Vendor: {{ item.created_by.username }}</p>
+        <h1 class="mb-5 text-3xl"> <strong class="font-semibold">{{ product.name }}</strong></h1>
+        <p class="text-xl">Price: {{ product.price }}</p>
+        <p>Vendor: {{ product.created_by.username }}</p>
 
         <p>Product Details: <br>
-            <span>{{ item.description }}</span>
+            <span>{{ product.description }}</span>
         </p>
     </div>
     <a href="#" class="mt-5 px-">Contact with vendor</a>
