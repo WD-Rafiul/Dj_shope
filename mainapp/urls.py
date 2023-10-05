@@ -10,5 +10,6 @@ app_name = 'mainapp'
 urlpatterns = [
     path('', views.index, name='index'),
     path('contact/', views.contact, name='contact'),
-    path('singup/', views.singup, name='singup')
+    path('singup/', views.singup, name='singup'),
+    path('login/', views.login, name='login'),
 ]

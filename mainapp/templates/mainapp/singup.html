@@ -9,22 +9,22 @@
         {% csrf_token %}
         <div>
             <label class="inline-block mb-2" for="">User name</label><br>
-            <input id="your_name" type="text" name="your_name" maxlength="100" required>
+            <input class="w-full p-2 rounded-md" id="your_name" type="text" name="your_name" maxlength="100" required>
             {{form.username}}
         </div>
         <div>
             <label class="inline-block mb-2" for="">Email</label><br>
-            <input id="your_email" type="text" name="your_email" maxlength="100" required>
+            <input class="w-full p-2 rounded-md" id="your_email" type="text" name="your_email" maxlength="100" required>
             {{form.email}}
         </div>
         <div>
             <label class="inline-block mb-2" for="">Password</label><br>
-            <input id="password1" type="text" name="password1" maxlength="100" required>
+            <input class="w-full p-2 rounded-md" id="password1" type="password" name="password1" maxlength="100" required>
             {{form.password1}}
         </div>
         <div>
             <label class="inline-block mb-2" for="">Re-enter password</label><br>
-            <input id="password2" type="text" name="password2" maxlength="100" required>
+            <input class="w-full p-2 rounded-md" id="password2" type="password" name="password2" maxlength="100" required>
             {{form.password2}}
         </div>
     </form>

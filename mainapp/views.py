@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from item.models import Category, Items
 
-from .forms import SingupForm
+from .forms import SingupForm ,LoginForm
 
 # Create your views here.
 
@@ -23,3 +23,8 @@ def contact(request):
 def singup(request):
     form = SingupForm()
     return render(request, 'mainapp/singup.html')
+
+
+def login(request):
+    form = LoginForm()
+    return render(request, 'mainapp/login.html')

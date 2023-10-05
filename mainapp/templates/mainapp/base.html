@@ -11,7 +11,7 @@
     <nav class="px-10 py-5 border-solid border-2 border-slate-400  flex item-center justify-between">
     <a class="text-xl " href="/">E Shop</a>
     <div class="gap-x-5 flex justify-between">
-        <a class="bg-teal-400 text-slate-100 px-5 py-2 rounded-md hover:bg-teal-700" href="">Sing in</a>
+        <a class="bg-teal-400 text-slate-100 px-5 py-2 rounded-md hover:bg-teal-700" href="{% url 'mainapp:login' %}">Log in</a>
         <a class="bg-red-300 text-slate-100 px-5 py-2 rounded-md hover:bg-red-700" href="{% url 'mainapp:singup' %}">Sing up</a>
     </div>
 </nav>
