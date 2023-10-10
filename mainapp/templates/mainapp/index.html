@@ -5,17 +5,19 @@
 <!-- here is the item  -->
 <div class="px-5 py-12 bg-gray-200 ml-56">
     <h1 class="mb-5 text-2xl text-center">New Products</h1>
-    <div class=" grid grid-cols-4 gap-2">
+    <div class=" grid grid-cols-2 md:grid-cols-3 xl:gtid-cols-4 gap-2 ">
         {% for product in itemss %}
         <div>
-            <a href="">gd</a>
-            <div>
-                <img class="w-72 h-64 rounded-2xl" src="{{ product.image.url}}" alt=" {{product.Name}}">
+            <a href="#">
                 <div>
-                    <h2 class=" text-2xl">{{product.Name}}</h2>
-                    <p>{{ product.price}}</p>
+                    <img class="w-72 h-64 rounded-2xl" src="{{ product.image.url}}" alt=" {{product.Name}}">
+                    <div>
+                        <h2 class=" text-2xl">{{product.Name}}</h2>
+                        <p>{{ product.price}}</p>
+                    </div>
                 </div>
-            </div>
+            </a>
+            
         </div>
         {% endfor %}
     </div>
