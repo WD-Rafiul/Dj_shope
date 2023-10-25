@@ -14,6 +14,8 @@ def index(request):
     categories = Category.objects.all()
     return render(request, 'mainapp/index.html', {'categoriess': categories,'itemss': items})
 
+# categories & items are same page which without cotation 
+# the other 2 which with "" cotation those working in the html file
 
 
 def contact(request):
