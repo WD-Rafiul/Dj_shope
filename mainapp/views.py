@@ -35,6 +35,6 @@ def signup(request):
     return render(request, 'mainapp/signup.html', {'form': form})
 
 
-def signin(request):
-    form = SigninForm()
-    return render(request, 'mainapp/signin.html')
+# def signin(request):
+#     form = SigninForm()
+#     return render(request, 'mainapp/signin.html')
