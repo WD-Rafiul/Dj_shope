@@ -9,24 +9,24 @@ class SignupForm(UserCreationForm):
 
     username = forms.CharField(widget=forms.TextInput(attrs={
             'placeholder':'Enter your username',
-            'class':'w-full py-5 px-5 rounded-xl !outline-none'}))
+            'class':'w-full py-3 px-5 rounded-xl !outline-none'}))
 
     email = forms.CharField(widget=forms.EmailInput(attrs={
             'placeholder':'Enter your Email',
-            'class':'w-full py-5 px-5 rounded-xl !outline-none'}))
+            'class':'w-full py-3 px-5 rounded-xl !outline-none'}))
 
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={
             'placeholder':'Enter your password',
-            'class':'w-full py-5 px-5 rounded-xl !outline-none'}))
+            'class':'w-full py-3 px-5 rounded-xl !outline-none'}))
 
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
             'placeholder':'Re-enter your password',
-            'class':'w-full py-5 px-5 roundedxl !outline-none'}))
+            'class':'w-full py-3 px-5 rounded-xl !outline-none'}))
 
 class SigninForm(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={
-        'placeholder': 'Your user name',
-        'class': 'w-full py-4 px-6 rounded-xl !outline-none'}))
+            'placeholder': 'Your user name',
+            'class': 'w-full py-4 px-6 rounded-xl !outline-none'}))
 
     password = forms.CharField(widget=forms.PasswordInput(attrs={
             'placeholder':'Enter your password',

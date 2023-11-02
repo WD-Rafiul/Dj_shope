@@ -11,7 +11,7 @@
         <div>
             <a href="{%url 'item:detail' item.id %}">
                 <div class="bg-gray-300 w-76 h-64 rounded-2xl">
-                    <img class="w-full h-60 rounded-t-2xl" src="{{ item.image.url}}" alt="">
+                    <img class="w-full h-56 rounded-t-2xl" src="{{ item.image.url}}" alt="">
                     <div>
                         <h2 class="text-center text-xl">{{item.Name}} : {{ item.price}}</h2>
                     </div>
@@ -25,7 +25,7 @@
 
 <!-- Categoris  -->
 <div class="mt-1 px-5 pt-3 bg-gray-100 fixed w-56 h-screen top-20">
-    <h1 class="mb-5 text-2xl text-center">New Products</h1>
+    <h1 class="mb-5 text-2xl text-center">Products Categories</h1>
     <div class="gap-5">
         {% for prod_category in categoriess %}
         <div class="py-2">

@@ -26,12 +26,14 @@
     <h2 class="text-2xl text-center">Related items</h2>
     <div>
         {% for item in related_items %}
-        <div class="bg-gray-300 w-76 rounded-2xl">
+        <div class="grid grid-cols-4 bg-gray-100 w-76">
             <a href="{%url 'item:detail' item.id%}">
-                <img src="{{ item.image.url }}" alt="">
-                <div>
-                    <h2>{{item.Name}}</h2>
-                    <p>{{item.price}}</p>
+                <div class="w-full">
+                    <img class="rounded-t-2xl" src="{{ item.image.url }}" alt="">
+                    <div>
+                        <h2 class="text-center text-xl">{{item.Name}}</h2>
+                        <p class="text-center te text-xl">{{item.price}}</p>
+                    </div>
                 </div>
             </a>
         </div>
