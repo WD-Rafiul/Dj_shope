@@ -20,7 +20,7 @@
 
         {% if request.user.is_authenticated %}
         <a class="bg-teal-300 px-5 py-2 rounded-md hover:bg-teal-600"
-        href="#">go to dashboard</a>
+        href="{% url 'deshboard:index' %}">go to dashboard</a>
 
         <a class="bg-red-300 text-slate-100 px-2 py-2 rounded-md hover:bg-red-700"
         href="{% url 'mainapp:logout' %}">Log out</a>

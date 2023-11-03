@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainapp',
     'item',
+    'deshboard',
 ]
 
 MIDDLEWARE = [
