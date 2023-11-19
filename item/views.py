@@ -4,8 +4,8 @@ from .forms import NewItemForm, EditItemForm
 
 
 # Create your views here.
+from . models import Items, Category
 
-from . models import Items
 def details(request,pk):
     item = get_object_or_404(Items, pk=pk)
     related_items = Items.objects.filter(category=item.category,is_sold=False).exclude(pk=pk)[:3]
@@ -54,5 +54,20 @@ def delete(request, pk):
     item = get_object_or_404(Items, pk=pk, created_by= request.user)
     item.delete()
 
-
     return redirect('deshboard:index')
+
+
+def items(request):
+    items=Items.objects.filter(is_sold=False)
+    category_id = request.GET.get('category', 0)
+    categories = Category.objects.all()
+
+    if category_id:
+        items = items.filter(category_id = category_id)
+
+
+    return render(request, 'item/items.html', {
+        'items': items,
+        'categories': categories,
+        'category_id':category_id,
+        })
