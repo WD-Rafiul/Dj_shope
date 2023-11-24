@@ -22,6 +22,7 @@ from django.urls import path, include
 from mainapp.views import index
 
 urlpatterns = [
+    #path('messages/',include('messaging.urls')),
     path('',include('mainapp.urls')),
     path('items/', include('item.urls')),
     path('deshboard/', include('deshboard.urls')),

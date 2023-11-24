@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'mainapp',
     'item',
     'deshboard',
+    'messaging',
 ]
 
 MIDDLEWARE = [
