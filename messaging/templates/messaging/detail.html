@@ -1,0 +1,30 @@
+{% extends 'mainapp/base.html' %}
+{% block title %} Conversation {% endblock %}
+
+{% block content %}
+<h1 class="text-2xl text-center py-5">Message</h1>
+<div class="bg-teal-100 w-1/2 mx-auto p-5 rounded-xl">
+    <div class="w-full">
+        {% for message in conversation.messages.all %}
+        <div class="{% if message.created_by == request.user %}bg-blue-100{% else %} bg-gray-100 {% endif %}
+        {% if message.created_by == request.user %}text-right{% else %}text-left{% endif %}" >
+            <div class="px-5 my-4 rounded-xl">
+                <p class="mb-1"><strong class="text-2xl">{{ message.created_by.username }}</strong> @ {{ message.created_at }}</p>
+                <p class="text-xl">{{ message.content }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <form method="post" action="." class="py-2">
+        {% csrf_token %}
+        <div class="">
+            <div>
+                {{form.as_p}}
+            </div>
+            <button class=""><span class="material-symbols-outlined">send</span></button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+<!-- class="mt-6 py-4 px-8 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-white" -->

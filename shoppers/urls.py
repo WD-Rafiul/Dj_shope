@@ -22,9 +22,9 @@ from django.urls import path, include
 from mainapp.views import index
 
 urlpatterns = [
-    #path('messages/',include('messaging.urls')),
     path('',include('mainapp.urls')),
     path('items/', include('item.urls')),
     path('deshboard/', include('deshboard.urls')),
+    path('messages/',include('messaging.urls')),
     path('admin/', admin.site.urls),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
