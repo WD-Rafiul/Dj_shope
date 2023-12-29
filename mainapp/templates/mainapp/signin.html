@@ -1,5 +1,5 @@
 {% extends 'mainapp/base.html' %}
-{% block title %}/ Sign in{% endblock %}
+{% block title %}Sign in{% endblock %}
 
 {% block content %}
 <div class="bg-teal-100 w-1/2 mx-auto p-5 rounded-xl">
@@ -22,11 +22,7 @@
             {{ form.non_field_errors }}
         </div>
         {% endif %}
-
-        <button class="py-4 px-8 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-white">Sign in</button>
+        <button class="px-8 py-3 mt-5 rounded-xl bg-teal-300 hover:bg-teal-700 text-slate-100" type="submit">Log in</button>
     </form>
 </div>
-
-
-
 {% endblock %}

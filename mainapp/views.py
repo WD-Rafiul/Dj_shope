@@ -10,7 +10,7 @@ from .forms import SignupForm ,SigninForm
 
 
 def index(request):
-    items = Items.objects.filter(is_sold=False)[:12]
+    items = Items.objects.filter(is_sold=False)[:20]
     categories = Category.objects.all()
     return render(request, 'mainapp/index.html', {'categoriess': categories,'itemss': items})
 

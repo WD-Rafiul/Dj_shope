@@ -33,3 +33,15 @@ class SigninForm(AuthenticationForm):
             'class':'w-full py-5 px-5 rounded-xl !outline-none'}))
 
 
+class SigninForm(AuthenticationForm):
+    class Meta:
+        model = User
+        fields = ('username', 'password')
+
+    username = forms.CharField(widget=forms.TextInput(attrs={
+        'placeholder': 'Enter user name',
+        'class':'w-full py-4 px-6 rounded-xl !outline-none'}))
+
+    password =forms.CharField(widget=forms.PasswordInput(attrs={
+        'placeholder': 'Enter password',
+        'class':'w-full py-4 px-6 rounded-xl !outline-none'}))
